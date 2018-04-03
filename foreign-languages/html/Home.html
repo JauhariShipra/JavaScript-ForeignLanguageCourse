@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<meta charset="UTF-8">
+</head>
+<body style="font-family: 'adelle','serif'">
+	 <header class="topMenu">
+		<nav class="navbar navbar-fixed-top navbar-inverse bg-primary" >
+			<div class="container container-fluid menuList">
+				<!-- <h3 class="navbar-brand"><img src="./images/logo.png" class="logo"></h3> -->
+				<!-- <a class="navbar-brand"><h3><span class="logoTxt">T</span>raverse <span class="logoTxt">T</span>he <span class="logoTxt">O</span>cean</h3></a> -->
+			</div>
+				
+		</nav>
+	</header>
+
+	<div class="lang-selection">
+		<div class="container container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12 main-content">
+					<div class="quote">
+						<h1>“Learning a new language, just like opening a new window, allows you to see the world with intimacy.” </h1>
+						<h4 class="author"> Pearl Zhu</h4>
+					</div>
+					<div class="quote programTag">
+						<h1>The World Is Waiting!!</h1>
+						<div class="col-xs-4 col-md-4 col-lg-4">
+							<select class="form-control form-control-sm" id="language" required>
+								<option value="">Select Language</option>
+							</select>
+						</div>
+						<div class="col-xs-4 col-md-4 col-lg-4">
+							<select class="form-control form-control-sm" id="country"> <!-- cntyName --> 
+								<option value="">Select Destination</option>	
+							</select>
+						</div>
+						<div class="col-xs-4 col-md-4 col-lg-4">
+							<button onclick="exploreCountry()" type="button" class="btn btn-primary" id="exploreBtn">Explore </button>
+						</div>
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close">&times;</span>
+							    <p>Some text in the Modal..</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container container-fluid programContnt">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<h1>Discover</h1>
+				<h4>Find a language program in your dream destination.</h4>
+				<div class="col-xs-6 col-md-6 col-lg-6">
+					<h3>Where do you want to go?</h3>
+					<div class="imgTile">
+						<img src="../images/GermanyPrograms.jpg" class="tileImg">
+					</div>
+					<div id="cntryLink" class="listLnk col-xs-2 col-md-2 col-lg-6"></div>
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-6">
+					<h3>Which language interests you?</h3>
+					<div class="imgTile">
+						<img src="../images/GermanyLanguage.png" class="tileImg">
+					</div>
+					<div id="langLink" class="listLnk col-xs-2 col-md-2 col-lg-6"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div id="study" class="col-xs-6 col-md-6 col-lg-6 CourseTile">
+					<h2>Study Abroad</h2>
+					<h4>New way of seeing things</h4>
+					<select class="form-control form-control-sm countryName" id="studyCountry">
+						<option>Search By Country</option>
+					</select>
+					<select class="form-control form-control-sm" id="studyProgram">
+						<option>Search By Program</option>
+					</select>
+				</div>	
+
+				<div id="volunteer" class="col-xs-6 col-md-6 col-lg-6 CourseTile">
+					<h2>Volunteer Abroad</h2>
+					<h4>Inspire new ways</h4>
+					<select class="form-control form-control-sm countryName" id="volunteerCountry">
+						<option>Search By Country</option>
+					</select>
+					<select class="form-control form-control-sm" id="volunteerProgram">
+						<option>Search By Program</option>
+					</select>
+				</div>	
+			</div>
+		</div>
+	</div> -->
+
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div id="teach" class="col-xs-6 col-md-6 col-lg-6 CourseTile">
+					<h2>Teach Abroad</h2>
+					<h4>New way of seeing things</h4>
+					<select class="form-control form-control-sm countryName" id="teachCountry">
+						<option>Search By Country</option>
+					</select>
+					<select class="form-control form-control-sm" id="teachProgram">
+						<option>Search By Program</option>
+					</select>
+				</div>	
+
+				<div id="intern" class="col-xs-6 col-md-6 col-lg-6 CourseTile">
+					<h2>Intern Abroad</h2>
+					<h4>Inspire new ways</h4>
+					<select class="form-control form-control-sm countryName" id="internCountry">
+						<option>Search By Country</option>
+					</select>
+					<select class="form-control form-control-sm" id="internProgram">
+						<option>Search By Program</option>
+					</select>
+				</div>	
+			</div>
+		</div>
+	</div> -->
+	<footer class="footerTxt"></footer>
+
+
+
+</body>
+	<!-- <script type="text/javascript" src="../js/main.js"></script> -->
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/home.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+

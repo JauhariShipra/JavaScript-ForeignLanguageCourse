@@ -1,0 +1,266 @@
+body{
+	font-family: "adelle",serif;
+}
+
+/*Navigation*/
+.menuList{text-transform:capitalize;margin-bottom: 0;border-radius: 0;}
+.menuList h3{margin:5px 200px 0 50px;}
+.topMenu> .navbar> .container >.navbar-brand{
+	margin-left: 1%;
+}
+.menuList .logoTxt{
+	font-size: 35px;
+	color:#fff;
+	text-shadow: 1px 1px #9d9d9d;
+}
+/*Navigation End*/
+
+/*Cover Page*/
+.lang-selection{
+	background:url(../images/newBackground.png) no-repeat;
+	position: relative;
+	box-sizing: border-box;
+	margin-top: 50px;
+	min-height: 725px;
+	color: #fff;
+	font-family: "adelle",serif;
+}
+.quote{
+	width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-shadow: 0 1px 1px #333;
+}
+.programTag h1{
+	text-align: center;
+}
+.lang-selection .quote .author{
+	float: right;
+}
+.lang-selection .programTag{
+	padding-top: 11px;
+    transform: translateY(20%);
+}
+.srchTxt{
+	font-size: 18px;
+	font-weight: 600;
+}
+.lang-selection select{
+    height: 50px;
+    position: relative;
+    font-size: 18px;
+    margin: 0;
+    background: #fff;
+    color:#000;
+    border-color: #000;
+}
+#exploreBtn{
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	background: rgb(265,205,45);
+	color: #000;
+	border-color: #000;
+    border-radius: 10px;
+}
+.CourseTile select{
+	width:85%;
+	margin-top:10px;
+}
+/*Cover Page End*/
+
+/*Home Page*/
+#cntyName > .dropdown-group {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    margin: 10px 28px 10px 40px;
+    position: relative;
+    padding: 0;
+}
+.main-content{
+	border:1px solid transparent;
+	border-radius: 5px;
+	padding: 20px 10px;
+}
+.main-content p{
+	font-size:18px;
+}
+.imgTile{
+	min-height: 375px;
+}
+.programContnt{
+	text-align: center;
+}
+.tileImg{
+	width:100%;
+	min-height: 295px;
+}
+.listLnk{
+	margin-top: 20px;
+}
+.contryNames, .langNames{
+	color:#FF8C00;
+	font-size:18px;
+	padding: 10px;
+	/*transform: translateX(50%);*/
+}
+#cntryLink, #langLink{
+	transform: translateX(20%);
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Home Page End*/
+
+/*Coommon Styles*/
+.content-wrapper{
+	margin-top:50px;
+}
+.cntyImgCover{
+	min-height:600px;
+	color:#fff;
+	text-align: center;
+	text-shadow: 0 1px 1px #333;
+}
+.container .row .srchBtn{
+	font-size: 18px;
+	background: rgb(265,205,45);
+	border-color: #FFA500;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin-top: 50px;
+}
+.formGenral{
+	background: #fff;
+	box-shadow: 1px 1px 2px 2px #C0C0C0;
+	color: #222;
+	padding: 20px;
+    border-radius: 5px;
+    margin: 30px;
+    box-sizing: border-box;
+}
+.formGenral > .form-group{
+	display: inline-block;
+	width:50%;
+	padding: 10px 30px;
+    box-sizing: border-box;
+}
+/*input:invalid {
+    border-color: #FF0000;
+}*/
+#brochureForm .errorMsg{
+	border:2px solid #FF0000;
+}
+#language .errorMsg{
+	border:2px solid #FF0000;
+}
+#brochureForm .noError{
+	border:2px solid #ccc;
+}
+input,
+input:valid {
+    border-color: #ccc;
+}
+.requrd{
+	color:#FF0000;
+}
+/*#thanksNote{
+	display: none;
+}*/
+/*Coommon Styles End */
+
+/*Cover Image for all pages*/
+.cntryFrance{
+	background: url(../images/FranceBackground.png) no-repeat;
+}
+.cntryJapan{
+	background: url(../images/japan.jpg) no-repeat;
+}
+.cntryGermany{
+	background: url(../images/germany.jpg) no-repeat;
+}
+.cntryItaly{
+	background: url(../images/italy.jpg) no-repeat;
+}
+.cntryMexico{
+	background: url(../images/mexico.jpg) no-repeat;
+}
+.cntryRussia{
+	background: url(../images/russia.jpg) no-repeat;
+}
+.cntryChina{
+	background: url(../images/china.jpg) no-repeat;
+}
+.cntryIreland{
+	background: url(../images/ireland.jpg) no-repeat;
+}
+.cntrySweden{
+	background: url(../images/sweden.jpg) no-repeat;
+}
+/*Cover Image for all pages end*/
+
+/*About Page*/
+.aboutImg{
+	float:left;
+}
+
+/*About Page End*/
+
+/*Footer*/
+footer{
+	padding: 4px 0;
+    margin-top: 50px;
+    font-size: 85%;
+    text-align: center;
+    color: #9d9d9d;
+    background-color: #222;
+    border-color: #080808;
+}
+/*Footer End */
+
+select optgroup.dropdownCountry{
+	font-weight: bold;
+	color:red;
+	background:#000;
+}
+
+
+
+
+
+
