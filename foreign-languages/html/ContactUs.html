@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Contact Us</title>
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>
 </head>
-<body style="font-family: 'adelle','serif'">
-	 <header class="topMenu">
+<body>
+	<header class="topMenu">
 		<nav class="navbar navbar-fixed-top navbar-inverse bg-primary" >
-			<div class="container menuList">
-			</div>
-				
+			<div class="container menuList"></div>
 		</nav>
 	</header>
-	
-		<div class="contctUs">
-			<div class="container content-wrapper">
-				<div class="row">
-					<div class="col-xs-12 col-md-12 col-lg-12">
-						<form>
+	<div class="contctUs">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12 formGenral contactBlock">
+					<div class="col-xs-6 col-md-6 col-lg-6">
+						<form id="contactForm" class="formInfo">
 							<div class="form-group">
-								<label for="fname">First Name</label>
-								<input type="text" name="fname" class="form-control fname"/>
-								<label for="lname">Last Name</label>
-								<input type="text" name="lname" class="form-control lname"/>
+								<label for="name" class="formHeader">HOW SHALL WE CALL YOU</label>
+								<input type="text" name="name" class="form-control fname" placeholder="Type Your Name" pattern="[A-Za-z]{1,20}" required/>
 							</div>
-  							<div class="form-group">
-  								<label for="email">Email Address</label>
-  								<input type="text" name="email" class="form-control email"/>
-  							</div>
-  							<div class="form-group">
-  								<label for="gender">Gender
-  								<label class="form-check-label">
-  									<input type="radio" name="gender" class="form-check-input" value="male"> Male
-  								</label>
-  								<label class="form-check-label">
-  									<input type="radio" name="gender" class="form-check-input" value="female"> Female
-  								</label>
-  								<label class="form-check-label">
-  									<input type="radio" name="gender" class="form-check-input" value="other"> Other
-  								</label>
-  							</label>
-  							</div>
-  						</form>
-					
+							<div class="form-group">
+	  							<label for="phone" class="formHeader">SHARE YOUR NUMBER</label>
+	  							<input type="tel" name="phone" class="form-control phone" placeholder="Your Phone Number" pattern="^[0-9\-\+\s\(\)]*$"/>
+	  						</div>
+	  						<div class="form-group">
+	  							<label for="email" class="formHeader">SHARE YOUR EMAIL</label>
+	  							<input type="text" name="email" class="form-control email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required/>
+	  						</div>
+	  						<div class="form-group">
+	  							<label for="message" class="formHeader">WE'RE ALL EARS!</label>
+	  							<textarea rows="5" class="form-control contactNote">YOU HAVE QUERY.....WE'RE HERE!!
+								</textarea>
+	  						</div>
+	  						<button type="sublit" class="btn btn-primary">Submit</button>
+	  					</form>
+					</div>
+					<div class="col-xs-6 col-md-6 col-lg-6">
+						<h3 class="formHeader">GET IN TOUCH WITH US</h3>
+						<h4 class="contctDetail">
+							<img src="../images/call.jpg" class="contctImg">
+							<span>CALL : 012-345-6789</span>
+						</h4>
+						<h4 class="contctDetail">
+							<img src="../images/email.jpg" class="contctImg">
+							<span>EMAIL : abc@xyz.com</span>
+						</h4>
 					</div>
 				</div>
 			</div>
 		</div>
-		<footer class="footerTxt"></footer>
-
+	</div>
+	<footer class="footerTxt"></footer>
 </body>
-<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/form.js"></script>
 </html>
+
+
+

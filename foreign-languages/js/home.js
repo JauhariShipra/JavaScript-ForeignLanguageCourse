@@ -1,6 +1,4 @@
-// Set language and contry name on home page dropdown
-function setDropdown(){
-	var dropDownArr = [
+var dropDownArr = [
 		{"language":"French", "country":[{"France":[{1: "Paris",2: "St Raphel"}]}]},
 		{"language":"German", "country":[{"Germany":[{1: "Berlin", 2: "Munich"}]}]},
 		{"language":"Italian", "country":[{"Italy":[{1:"Rome", 2: "Venice", 3:"Milan"}]}]},
@@ -10,55 +8,88 @@ function setDropdown(){
 		{"language":"Russian","country":[{"Russia":[{1:"Moscow",2:"St.Petersburg"}]}]},
 		{"language":"Irish","country":[{"Ireland":[{1:"Dublin",2:"Galway"}]}]},
 		{"language" : "Swedish", "country":[{"Sweden":[{1:"Stockton", 2:"Gothenburg"}]}]}
-	];
-	var getLanguage = document.getElementById('language');
-	var getCountry = document.getElementById('country');
-
+];
+var getLanguage = document.getElementById('language');
+var getCountry = document.getElementById('country');
+// Set language and contry name on home page dropdown
+function setDropdown(){
 	for(var i = 0, lngth = dropDownArr.length; i < lngth; i++){
 		var dropdownObj = Object.values(dropDownArr[i]);
 		var languageVal = dropdownObj[0];
 		var countryVal = dropdownObj[1];
+		// Set language in dropdown
 		function setLanguage(){
 			var createLangElem = document.createElement('option');
 			createLangElem.innerHTML = languageVal;
 			getLanguage.appendChild(createLangElem);
 			createLangElem.value= languageVal;
 		}
-		for (var j = 0, objLength = countryVal.length; j < objLength; j++) {
-			var countryObj = countryVal[j];
-			var cntryName = Object.keys(countryObj);
-			// console.log(cntryName);
-		}
-		var countryNewObj = Object.values(countryObj);
-		// console.log(countryNewObj);
-		for (var k = 0, cntryLngth = countryNewObj.length; k < cntryLngth; k++) {
-			var obj = countryNewObj[k];
-			// console.log(countryNewObj[k]);
-		}
-		for(var prop in obj){
-			var optCountry = document.createElement("optgroup");
-			cntryName.forEach(function(val){
-				optCountry.setAttribute("label", val);
-				// console.log(optCountry);
-				optCountry.className += 'dropdownCountry';
-				optCountry.innerHTML = val;
-			})
-			country.appendChild(optCountry);
-		}
+		setLanguage();
 
-		var cityName = Object.values(obj[prop]);
-		// console.log(cityName);
+		var cntryName = Object.keys(countryVal[0]);//fetch country names
+		var countryNewObj = Object.values(countryVal[0]); // get city names array
+		var obj = countryNewObj[0];
+
+		var optCountry = document.createElement("optgroup");//creating element to display Country
+		cntryName.forEach(function(val){
+			optCountry.setAttribute("label", val);
+			optCountry.className += 'dropdownCountry';
+			optCountry.innerHTML = val;
+		})
+		country.appendChild(optCountry); 
+
+		var cityName = Object.values(obj[0]);
+		//Creating element to add city as child under country. 
 		cityName.forEach(function(elm){
 			var optCity = document.createElement('option');
 			optCity.innerHTML = elm;
 			optCity.className += 'dropdownCity';
 			country.appendChild(optCity);
 		});
-		setLanguage();
 	}
 }
-
 setDropdown();
+
+// Change Destination according to language selection
+getLanguage.onchange=function(){
+	var _val = this.options[this.selectedIndex].value;
+	for(var i = 0, lngth = dropDownArr.length; i < lngth; i++){
+		var dropdownObj = Object.values(dropDownArr[i]);
+		var languageVal = dropdownObj[0];
+		if(languageVal==_val){
+			var countryVal = dropdownObj[1];
+		    while (country.hasChildNodes()){
+		      country.removeChild(country.childNodes[0]);
+		    }
+		var cntryName = Object.keys(countryVal[0]);//fetch country names
+		var countryNewObj = Object.values(countryVal[0]); // get city names array
+		var obj = countryNewObj[0];
+		var cityName = Object.values(obj[0]);
+			cityName.forEach(function(elm){
+				var optCity = document.createElement('option');
+				optCity.innerHTML = elm;
+				optCity.className += 'dropdownCity';
+				country.appendChild(optCity);
+			});
+		}
+	}		
+}
+
+// Open country page as per language selection
+function exploreCountry(){
+	var lang = document.getElementById('language');
+	var modal = document.getElementById('myModal');
+	var span = document.getElementsByClassName("close")[0];
+	var getLanguage = document.getElementById('language');
+	
+	if(getLanguage.value == ""){
+		console.log("Inside if");
+		getLanguage.className += ' errorMsg';
+	}else{
+		getLanguage.className += ' noError';
+		window.open(lang.value.split(' ').join('') +'.html', name="_self");
+	}
+}
 
 // Open country page as per selected language
 function slctCntryLang(){
@@ -73,9 +104,7 @@ function slctCntryLang(){
 	var cntryLnk = document.getElementById('cntryLink');
 	var langLnk = document.getElementById('langLink');
 	for (var i = 0, l = cntryLang.length; i < l; i++) {
-		// console.log(cntryLang[i]);
 		var objVal = Object.values(cntryLang[i])
-		// var lnk = document.createElement('a');
 		if(cntryLnk.id == 'cntryLink'){
 			var lnk = document.createElement('a');
 			lnk.className += 'contryNames';
@@ -91,9 +120,10 @@ function slctCntryLang(){
 			langLnk.appendChild(lnk);
 		}
 	}
-
 }
 slctCntryLang();
+
+
 
 
 
