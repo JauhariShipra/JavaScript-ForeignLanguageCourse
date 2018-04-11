@@ -171,7 +171,7 @@ a.contryNames, .langNames{
 	padding: 10px 30px;
     box-sizing: border-box;
 }
-.priceQuote .formBtn, .brochure .formBtn, .schdulTour .formBtn{
+.priceQuote .formBtn, .brochure .formBtn, .schdulTour .formBtn, .pricetiles .formBtn{
 	font-size: 18px;
 	border:1px solid #7eb9d0; 
 	-webkit-border-radius: 7px; -moz-border-radius: 7px;border-radius: 7px;
@@ -188,7 +188,7 @@ a.contryNames, .langNames{
     padding: 10px 40px;
     margin: 35px 0px;
 }
-.priceQuote .formBtn:hover, .brochure .formBtn:hover{
+.priceQuote .formBtn:hover, .brochure .formBtn:hover, .pricetiles .formBtn:hover{
 	 border:1px solid #5ca6c4;
 	 color: #fff;
 	 background-color: #82bbd1; background-image: -webkit-gradient(linear, left top, left bottom, from(#82bbd1), to(#193b61));
@@ -262,25 +262,29 @@ input:valid {
 /*About Page End*/
 
 /*Book Class Page*/
-.classImg{
-	margin-top:10px;
+.bookClass{
+	background: url(../images/bookClass.webp)no-repeat;
+	background-attachment: fixed;
+	min-height: 400px;
 }
-.bkClsContnr{
-	position: relative;
-    bottom: 70px;
+.pricetiles{
+	border-right: 1px solid #DCDCDC;
 }
-.bookClassImg{
-	width: 100%;
+.pricetiles:last-child{
+	border: none;
 }
-.bookClassContnt h1, .bookClassContnt h3, .bookClassContnt h4{
-	font-weight: 900;
-	padding-bottom: 20px;
+.pricetiles .formBtn{
+	padding: 8px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 5px 0px; 
+}
+.bookngDtls{
+	margin:30px 0;
 }
 .bookClassContnt{
 	text-align: center;
-	font-weight: bold;
 	line-height: 20px;
-	margin-bottom: 50px;
 }
 .bookClassContnt li{
 	list-style: none;
